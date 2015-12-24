@@ -1,0 +1,10 @@
+# Variables set by user input
+loan = float(input("Total loan amount: "))
+i = float(input("Interest Rate: ")) / 100
+n = float(input("Number of years for the loan: ")) * 12
+
+# Calculating monthly payment
+monthlyPayment = ((loan * (i * (1.0 + i) * n)) / ((1.0 + i) * (n - 1.0)))
+
+# Print monthly payment to console
+print("Monthly Payment: ", monthlyPayment)
