@@ -1,0 +1,15 @@
+import turtle
+
+# Asking user for number of sides to shape
+totalSides = int(input("How many sides do you want your shape to have? "))
+angle = int(360 / totalSides)
+
+# Drawing shape based on input
+for side in range(totalSides):
+    turtle.color('blue')
+    turtle.forward(100)
+    turtle.right(angle)
+    for smallerSide in range(totalSides):
+        turtle.color('green')
+        turtle.forward(50)
+        turtle.right(angle)
