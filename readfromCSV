@@ -1,0 +1,21 @@
+# File previously written
+fileName = "newFile.txt"
+accessMode = "w"
+file = open(fileName, accessMode)
+number = 5
+for n in range(number):
+    name = input("Name: ")
+    age = input("Age: ")
+    file.write(name + ", " + age + "\n")
+
+file.close()
+
+# Reading from file and printing names/ages of guests
+import csv
+
+fileName = "newFile.txt"
+accessMode = "r"
+with open(fileName, accessMode) as fileName:
+    newCSV = csv.reader(fileName)
+    for eachRow in newCSV:
+        print(eachRow)
