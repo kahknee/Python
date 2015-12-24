@@ -1,0 +1,10 @@
+guestList = []
+number = int(input("How many guests will be attending? "))
+
+# Append user input into list created above
+for n in range(number):
+    guestList.append(input("Guest Name: "))
+
+# Alphabetize list and print to console
+guestList.sort()
+print(guestList)
