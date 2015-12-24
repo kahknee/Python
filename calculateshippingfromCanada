@@ -1,0 +1,19 @@
+# Prompting user for cost and their country of purchase
+totalCharge = float(input("Cost of purchase: "))
+country = input("What country did you purchase from? ").upper()
+
+# Checking from what country 
+if country == 'CANADA':
+    province = input("Province: ").upper()
+    # Checking which province to determine total + tax
+    if province == 'ALBERTA':
+        withTax = totalCharge * 1.05
+        print("Cost plus tax: %.2f" % withTax)
+    elif province == 'ONTARIO' or province == 'NEW BRUNSWICK' or province == 'NOVA SCOTIA':
+        withTax = totalCharge * 1.13
+        print("Cost plus tax: %.2f" % withTax)
+    else:
+        withTax = totalCharge * 1.11
+        print("Cost plus tax: %.2f" % withTax)
+else:
+    print("Your total: %.2f." % totalCharge) 
