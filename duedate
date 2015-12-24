@@ -1,0 +1,12 @@
+import datetime
+
+# Prompting user for due date and then formatting it
+dueDate = input("Input Deadline in mm/dd/YYY format: ")
+dueDate = datetime.datetime.strptime(dueDate, '%m/%d/%Y').date()
+currentDate = datetime.date.today()
+
+# Calculate total amount of time left
+difference = dueDate - currentDate
+
+# Printing the difference in days
+print(difference.days) 
