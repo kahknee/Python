@@ -1,0 +1,15 @@
+import sys
+
+# Checking if a file exsits
+accessMode = "r"
+name = input("What's the name of the file you're looking for? ")
+# Using try/catch in case of error
+try : 
+    userFile = open(name, accessMode)
+    print(name)
+except FileNotFoundError : 
+    print("Looks like the file doesn't exist, please try again.")
+except :
+    error = sys.exec_info()[0]
+    print("Sorry, looks like something went wrong.")
+    print(error) 
