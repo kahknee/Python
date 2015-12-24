@@ -1,0 +1,17 @@
+import turtle
+import sys
+
+# Asking user for color, line length, and angle
+color = input("Choose a color (blue, green, red, or black): ")
+lineLength = int(input("Length of line: "))
+angle = int(input("Angle of line: "))
+
+# Ensuring there is a line length to draw
+while lineLength != 0:
+    if lineLength > 0:
+        turtle.color(color)
+        turtle.forward(lineLength)
+        turtle.right(angle)
+        lineLength = int(input("Length of line: "))
+    else:
+        sys.exit()
