@@ -1,0 +1,9 @@
+# Prompting user for their total cost
+totalCost = float(input("Total Cost: "))
+
+# Checking if total matches criteria to be eligible for free shipping
+if totalCost >= 50.0:
+    print("Final cost of purchase: %.2f" % totalCost)
+else :
+    final = totalCost + 10.0
+    print("Final cost of purchase: %.2f" % final) 
